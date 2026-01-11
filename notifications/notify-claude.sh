@@ -30,4 +30,5 @@ terminal-notifier \
   -message "$dir_name" \
   -group "claude-$session_id" \
   -sound default \
-  -activate com.googlecode.iterm2
+  -activate com.googlecode.iterm2 \
+  -timeout 30
