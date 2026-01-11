@@ -55,7 +55,8 @@
       "Bash(find:*-exec:*)",
       "Bash(find:*-execdir:*)",
       "Bash(find:*-delete:*)",
-      "Bash(find:*-ok:*)"
+      "Bash(find:*-ok:*)",
+      "Write(~/.claude)"
     ],
     "ask": [
       "Bash(git push:*)"
@@ -93,7 +94,7 @@
     "rust-analyzer-lsp@claude-plugins-official": true,
     "claude-hud@claude-hud": true,
     "ralph-loop@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": false 
+    "code-simplifier@claude-plugins-official": true
   },
   "sandbox": {
     "enabled": true
