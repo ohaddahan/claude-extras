@@ -1,43 +1,44 @@
 {
-	 "permissions": {
+  "env": {
+    "RUST_BACKTRACE": "1",
+    "CARGO_TERM_COLOR": "always"
+  },
+  "permissions": {
     "allow": [
-		  "Bash(pwd)",
-		  "Bash(which:*)",
-		  "Bash(node --version)",
-		  "Bash(npm --version)",
-		  "Bash(rustc --version)",
-		  "Bash(anchor --version)",
-			"Bash(wc:*)",
+      "Bash(pwd)",
+      "Bash(which:*)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(rustc --version)",
+      "Bash(anchor --version)",
+      "Bash(wc:*)",
       "Bash(tree:*)",
       "Bash(find:*)",
       "Bash(grep:*)",
-			"Bash(cargo fmt:*)",
-			"Bash(rustfmt:*)",
-			"Bash(cargo build:*)",
-			"Bash(cargo clippy:*)",
-			"Bash(cargo test:*)",
-			"Bash(cargo check:*)",
-			"Bash(cargo tree:*)",
-			"Bash(cargo search:*)",
-			"Bash(anchor run check:*)",
-			"Bash(anchor build:*)",
-			"Bash(anchor test:*)",
-			"Bash(SQLX_OFFLINE=true cargo clippy:*)",
-			"Bash(./scripts/init_db.sh)",
-			"Bash(npm run lint:fix)",
-			"Bash(npm install)",
-			"Bash(npm run build:*)",
-			"Bash(npm lint:*)",
-			"Bash(npm run lint:*)",
-			"Bash(git status:*)",
-			"Bash(git diff:*)",
-			"Bash(git log:*)",
-			"Bash(anchor idl build:*)",
-			"Bash(ls:*)",
-			"Read(./*)"
-    ],
-    "ask": [
-      "Bash(git push:*)"
+      "Bash(cargo fmt:*)",
+      "Bash(rustfmt:*)",
+      "Bash(cargo build:*)",
+      "Bash(cargo clippy:*)",
+      "Bash(cargo test:*)",
+      "Bash(cargo check:*)",
+      "Bash(cargo tree:*)",
+      "Bash(cargo search:*)",
+      "Bash(anchor run check:*)",
+      "Bash(anchor build:*)",
+      "Bash(anchor test:*)",
+      "Bash(SQLX_OFFLINE=true cargo clippy:*)",
+      "Bash(./scripts/init_db.sh)",
+      "Bash(npm run lint:fix)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(npm lint:*)",
+      "Bash(npm run lint:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(anchor idl build:*)",
+      "Bash(ls:*)",
+      "Read(./*)"
     ],
     "deny": [
       "Bash(rm -rf:*)",
@@ -47,16 +48,17 @@
       "Read(**/*.pem)",
       "Read(**/*.key)",
       "Read(**/credentials*)",
-			"Bash(npm run deploy)",
-			"Bash(anchor deploy)",
-      "Bash(curl:*|sh)",
-      "Bash(wget:*|sh)",
+      "Bash(npm run deploy)",
+      "Bash(anchor deploy)",
       "Bash(chmod 777:*)",
       "Bash(sudo:*)",
       "Bash(find:*-exec:*)",
       "Bash(find:*-execdir:*)",
       "Bash(find:*-delete:*)",
       "Bash(find:*-ok:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
     ]
   },
   "hooks": {
@@ -91,13 +93,9 @@
     "rust-analyzer-lsp@claude-plugins-official": true,
     "claude-hud@claude-hud": true,
     "ralph-loop@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true
+    "code-simplifier@claude-plugins-official": false 
   },
   "sandbox": {
     "enabled": true
-  },
-  "env": {
-    "RUST_BACKTRACE": "1",
-    "CARGO_TERM_COLOR": "always"
   }
 }
