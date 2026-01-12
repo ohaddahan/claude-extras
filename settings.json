@@ -5,6 +5,8 @@
   },
   "permissions": {
     "allow": [
+      "WebFetch(domain:docs.rs)",
+      "WebFetch(domain:crates.io)",
       "Bash(pwd)",
       "Bash(which:*)",
       "Bash(node --version)",
@@ -30,13 +32,14 @@
       "Bash(./scripts/init_db.sh)",
       "Bash(npm run lint:fix)",
       "Bash(npm install)",
-      "Bash(npm run build:*)",
-      "Bash(npm lint:*)",
-      "Bash(npm run lint:*)",
+      "Bash(npm run build)",
+      "Bash(npm run typecheck)",
+      "Bash(npm lint)",
+      "Bash(npm run lint:fix)",
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
-      "Bash(anchor idl build:*)",
+      "Bash(anchor idl build)",
       "Bash(ls:*)",
       "Read(./*)"
     ],
@@ -97,6 +100,6 @@
     "code-simplifier@claude-plugins-official": true
   },
   "sandbox": {
-    "enabled": true
+    "enabled": false
   }
 }
