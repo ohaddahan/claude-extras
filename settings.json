@@ -18,6 +18,7 @@
       "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(cargo fmt:*)",
+			"Bash(cargo sqlx prepare:*)",
       "Bash(rustfmt:*)",
       "Bash(cargo build:*)",
       "Bash(cargo clippy:*)",
