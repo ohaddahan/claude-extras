@@ -5,6 +5,12 @@
   },
   "permissions": {
     "allow": [
+      "Bash(nargo:*)",
+      "Bash(sunspot:*)",
+      "Bash(npm run codama:*)",
+      "Bash(cargo doc:*)",
+      "Bash(git -C:*)",
+      "WebFetch(domain:lib.rs)",
       "WebFetch(domain:docs.rs)",
       "WebFetch(domain:crates.io)",
       "Bash(pwd)",
@@ -18,7 +24,7 @@
       "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(cargo fmt:*)",
-			"Bash(cargo sqlx prepare:*)",
+      "Bash(cargo sqlx prepare:*)",
       "Bash(rustfmt:*)",
       "Bash(cargo build:*)",
       "Bash(cargo clippy:*)",
@@ -67,6 +73,16 @@
     ]
   },
   "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/continuous-learning-activator.sh"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "matcher": "",
@@ -98,7 +114,17 @@
     "rust-analyzer-lsp@claude-plugins-official": true,
     "claude-hud@claude-hud": true,
     "ralph-loop@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true
+    "code-simplifier@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "hookify@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "explanatory-output-style@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "context7@claude-plugins-official": true
   },
   "sandbox": {
     "enabled": false
