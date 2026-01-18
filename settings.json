@@ -5,6 +5,7 @@
   },
   "permissions": {
     "allow": [
+      "Bash(npx tsc:*)",
       "Bash(codex:*)",
       "Bash(codex exec:*)",
       "Bash(nargo:*)",
@@ -13,6 +14,7 @@
       "Bash(cargo doc:*)",
       "Bash(git -C:*)",
       "WebFetch(domain:lib.rs)",
+      "WebFetch(domain:tailwindcss.com)",
       "WebFetch(domain:docs.rs)",
       "WebFetch(domain:crates.io)",
       "Bash(pwd)",
