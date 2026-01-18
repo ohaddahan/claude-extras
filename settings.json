@@ -5,6 +5,8 @@
   },
   "permissions": {
     "allow": [
+      "Bash(codex:*)",
+      "Bash(codex exec:*)",
       "Bash(nargo:*)",
       "Bash(sunspot:*)",
       "Bash(npm run codama:*)",
@@ -48,7 +50,11 @@
       "Bash(git log:*)",
       "Bash(anchor idl build)",
       "Bash(ls:*)",
-      "Read(./*)"
+      "Bash(cat /tmp/codex-output*)",
+      "Bash(tee:*)",
+      "Bash(mktemp:*)",
+      "Read(./*)",
+      "Read(/tmp/codex-output*)"
     ],
     "deny": [
       "Bash(rm -rf:*)",
