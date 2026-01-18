@@ -4,3 +4,6 @@
 [submodule "claude-code-continuous-learning-skill"]
 	path = claude-code-continuous-learning-skill
 	url = https://github.com/blader/claude-code-continuous-learning-skill.git
+[submodule "claude-code-config"]
+	path = claude-code-config
+	url = https://github.com/jarrodwatts/claude-code-config.git
