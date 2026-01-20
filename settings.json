@@ -97,7 +97,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ohaddahan/RustroverProjects/zklsol/claude-extras/notifications/notify-claude.sh"
+            "command": "~/.claude/hooks/notify-claude.sh"
           }
         ]
       }
@@ -107,7 +107,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ohaddahan/RustroverProjects/zklsol/claude-extras/notifications/notify-claude.sh"
+            "command": "~/.claude/hooks/notify-claude.sh"
           }
         ]
       }

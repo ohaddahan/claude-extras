@@ -21,6 +21,7 @@ log_error() { echo -e "${RED}[ERROR]${NC} $1"; }
 mkdir -p "$CLAUDE_DIR/commands"
 mkdir -p "$CLAUDE_DIR/rules"
 mkdir -p "$CLAUDE_DIR/skills"
+mkdir -p "$CLAUDE_DIR/hooks"
 
 # Function to clean up broken symlinks in a directory
 cleanup_broken_links() {
@@ -103,6 +104,23 @@ for skill_dir in "$SCRIPT_DIR/skills"/*/; do
 
     create_link "$source_dir" "$CLAUDE_DIR/skills/$link_name"
 done
+
+echo ""
+echo "========================================"
+echo "Linking notification hooks..."
+echo "========================================"
+cleanup_broken_links "$CLAUDE_DIR/hooks"
+if [[ -f "$SCRIPT_DIR/notifications/notify-claude.sh" ]]; then
+    create_link "$SCRIPT_DIR/notifications/notify-claude.sh" "$CLAUDE_DIR/hooks/notify-claude.sh"
+fi
+
+echo ""
+echo "========================================"
+echo "Linking settings.json..."
+echo "========================================"
+if [[ -f "$SCRIPT_DIR/settings.json" ]]; then
+    create_link "$SCRIPT_DIR/settings.json" "$CLAUDE_DIR/settings.json"
+fi
 
 echo ""
 echo "========================================"
