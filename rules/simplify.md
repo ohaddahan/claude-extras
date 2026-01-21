@@ -1,0 +1,3 @@
+- After you finish editing files, not midway, when you are done.
+- Run @code-simplifier:code-simplifier agent on the file.
+- Limit @code-simplifier:code-simplifier fixes ONLY to the changes you made now.

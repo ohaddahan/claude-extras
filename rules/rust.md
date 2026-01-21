@@ -21,6 +21,13 @@
 
 - Use `cargo clippy`
 
+## Format Strings
+
+- Always inline variables in format strings
+- Bad: `format!("{}", var)`, `println!("{:?}", var)`
+- Good: `format!("{var}")`, `println!("{var:?}")`
+- For width/precision: use `format!("{var:width$}")` not `format!("{0:1$}", var, width)`
+
 ## Helpers
 
 - Make folders per topic
